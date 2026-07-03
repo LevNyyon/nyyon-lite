@@ -57,21 +57,25 @@ into a mess.
 
 ## Install (on any Claude Code / agent)
 
-Clone it into the agent's skills folder, then link the commands so `/nyyon-tools`,
-`/nyyon-gateways`, etc. resolve:
+One command. It installs the skill into `~/.claude/skills/nyyon-lite` and links the
+`/nyyon-*` commands. Re-run it any time to update:
 
 ```bash
-git clone https://github.com/LevNyyon/nyyon-lite.git \
-  ~/.claude/skills/nyyon-lite
+curl -fsSL https://raw.githubusercontent.com/LevNyyon/nyyon-lite/main/install.sh | bash
+```
 
-# make the slash commands available (symlink, so they update when you pull)
+Prefer to see what runs first? Do the same by hand:
+
+```bash
+git clone https://github.com/LevNyyon/nyyon-lite.git ~/.claude/skills/nyyon-lite
 mkdir -p ~/.claude/commands
 ln -sf ~/.claude/skills/nyyon-lite/commands/*.md ~/.claude/commands/
 ```
 
-Or per-project: clone into `.claude/skills/` and link into `.claude/commands/`. The skill
-auto-triggers on build / extend / wire-a-service / review tasks via its description; the
-commands are typed explicitly (`/nyyon-tools score_icp_fit`).
+The skill auto-triggers on build / extend / wire-a-service / review tasks via its
+description; the commands are typed explicitly (`/nyyon-tools score_icp_fit`). For a
+per-project install, set `NYYON_LITE_DIR=.claude/skills/nyyon-lite` and
+`NYYON_LITE_CMDDIR=.claude/commands` before the one-liner.
 
 ## Use it
 
