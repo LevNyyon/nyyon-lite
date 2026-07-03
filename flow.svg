@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1240 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#0A0A0A"/>
+    </marker>
+  </defs>
+  <rect width="1240" height="360" fill="#FAFAF9"/>
+
+  <text x="50" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" letter-spacing="2.5" fill="#78716C">A REQUEST, IN PRACTICE</text>
+  <text x="50" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#57534E">The same five layers, one real trip through them.</text>
+  <text x="50" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#6C5CE7">ask: &#8220;Score this lead&#8221;</text>
+
+  <!-- MODULE -->
+  <rect x="50" y="150" width="176" height="92" rx="12" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1.5"/>
+  <text x="138" y="184" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2" fill="#78716C">MODULE</text>
+  <text x="138" y="216" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#0A0A0A">Outreach</text>
+
+  <!-- WORKFLOW -->
+  <rect x="291" y="150" width="176" height="92" rx="12" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1.5"/>
+  <text x="379" y="184" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2" fill="#78716C">WORKFLOW</text>
+  <text x="379" y="216" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#0A0A0A">score_and_angle</text>
+
+  <!-- TOOL -->
+  <rect x="532" y="150" width="176" height="92" rx="12" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1.5"/>
+  <text x="620" y="184" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2" fill="#78716C">TOOL</text>
+  <text x="620" y="216" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#0A0A0A">score_icp_fit</text>
+
+  <!-- GATEWAY -->
+  <rect x="773" y="150" width="176" height="92" rx="12" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1.5"/>
+  <text x="861" y="184" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2" fill="#78716C">GATEWAY</text>
+  <text x="861" y="216" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#0A0A0A">llm</text>
+
+  <!-- SERVICE -->
+  <rect x="1014" y="150" width="176" height="92" rx="12" fill="none" stroke="#A8A29E" stroke-width="1.2" stroke-dasharray="4 5"/>
+  <text x="1102" y="184" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" letter-spacing="2" fill="#A8A29E">SERVICE</text>
+  <text x="1102" y="216" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" font-weight="700" fill="#57534E">Anthropic</text>
+
+  <!-- arrows down the chain -->
+  <line x1="234" y1="196" x2="283" y2="196" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="475" y1="196" x2="524" y2="196" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="716" y1="196" x2="765" y2="196" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="957" y1="196" x2="1006" y2="196" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- return path -->
+  <line x1="1102" y1="286" x2="138" y2="286" stroke="#A8A29E" stroke-width="1.2" stroke-dasharray="4 5" marker-end="url(#a)"/>
+  <text x="620" y="278" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#78716C">clean JSON returns along the same path</text>
+
+  <!-- activity bus -->
+  <rect x="50" y="312" width="1140" height="34" rx="10" fill="#0A0A0A"/>
+  <circle cx="74" cy="329" r="4" fill="#6C5CE7"/>
+  <text x="90" y="334" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" letter-spacing="1.5" fill="#FAFAF9">ACTIVITY &#183; every step is logged</text>
+</svg>

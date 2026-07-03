@@ -38,6 +38,10 @@ hundred small edits matters more than being clever in one.
 In short: small pieces, fixed edges, one at a time. Boring on purpose, so it never turns
 into a mess.
 
+## How a request flows
+
+![A request in practice: the Outreach module calls the score_and_angle workflow, which runs the score_icp_fit tool, which reaches the llm gateway, which calls Anthropic. The JSON result returns along the same path, and every step logs to Activity.](flow.svg)
+
 ## What's here
 
 - **`SKILL.md`** — the skill. When to use it, the model, a "which layer do I need" decision
@@ -48,6 +52,8 @@ into a mess.
   `/nyyon-workflows`, `/nyyon-modules`, `/nyyon-knowledge`, plus `/nyyon-surfaces` to add a
   page/view to an existing module. Each runs that layer's recipe, registers the result, and
   validates.
+
+![One command per layer: /nyyon-gateways builds a gateway, /nyyon-tools a tool, /nyyon-workflows a workflow, /nyyon-modules a module, /nyyon-surfaces a page for a module, /nyyon-knowledge an editable rule.](commands.svg)
 
 ## Install (on any Claude Code / agent)
 
