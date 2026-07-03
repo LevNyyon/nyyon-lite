@@ -1,6 +1,6 @@
 ---
 description: Build a new tool (one job, in the shared pool) the nyyon-lite way
-argument-hint: <name> e.g. score_icp_fit
+argument-hint: <name> e.g. summarize
 ---
 
 Build a **tool** named `$ARGUMENTS`, following the nyyon-lite skill.

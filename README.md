@@ -40,7 +40,7 @@ into a mess.
 
 ## How a request flows
 
-![A request in practice: the Outreach module calls the score_and_angle workflow, which runs the score_icp_fit tool, which reaches the llm gateway, which calls Anthropic. The JSON result returns along the same path, and every step logs to Activity.](flow.svg)
+![A request in practice: the Digest module calls the build_digest workflow, which runs the summarize tool, which reaches the llm gateway, which calls Anthropic. The JSON result returns along the same path, and every step logs to Activity.](flow.svg)
 
 ## What's here
 
@@ -73,7 +73,7 @@ ln -sf ~/.claude/skills/nyyon-lite/commands/*.md ~/.claude/commands/
 ```
 
 The skill auto-triggers on build / extend / wire-a-service / review tasks via its
-description; the commands are typed explicitly (`/nyyon-tools score_icp_fit`). For a
+description; the commands are typed explicitly (`/nyyon-tools summarize`). For a
 per-project install, set `NYYON_LITE_DIR=.claude/skills/nyyon-lite` and
 `NYYON_LITE_CMDDIR=.claude/commands` before the one-liner.
 
