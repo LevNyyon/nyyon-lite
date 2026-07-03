@@ -42,18 +42,25 @@ into a mess.
   table, a build recipe per layer, the guardrails, anti-patterns, and a review checklist.
 - **`templates/`** — a copy-paste skeleton per component: `gateway.js`, `tool.js`,
   `workflow.js`, `module.index.js`, `module.page.jsx`, `migration.sql`.
+- **`commands/`** — one slash command per layer: `/gateway`, `/tool`, `/workflow`,
+  `/module`, `/knowledge`. Each runs that layer's recipe, registers the result, and validates.
 
 ## Install (on any Claude Code / agent)
 
-Clone it into the agent's skills folder:
+Clone it into the agent's skills folder, then link the commands so `/gateway`, `/tool`, etc.
+resolve:
 
 ```bash
 git clone https://github.com/LevNyyon/layered-service-framework.git \
   ~/.claude/skills/layered-service-framework
+
+# make the slash commands available (symlink, so they update when you pull)
+ln -sf ~/.claude/skills/layered-service-framework/commands/*.md ~/.claude/commands/
 ```
 
-Or per-project: `.claude/skills/layered-service-framework`. The skill auto-triggers on
-build / extend / wire-a-service / review tasks via its description.
+Or per-project: clone into `.claude/skills/` and link into `.claude/commands/`. The skill
+auto-triggers on build / extend / wire-a-service / review tasks via its description; the
+commands are typed explicitly (`/tool score_icp_fit`).
 
 ## Use it
 

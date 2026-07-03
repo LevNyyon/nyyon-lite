@@ -54,6 +54,11 @@ First decide the layer:
 
 Then copy the matching file from `templates/` and follow its recipe.
 
+One slash command drives each layer (they live in `commands/`): `/gateway <slug>`,
+`/tool <name>`, `/workflow <name>`, `/module <slug>`, `/knowledge <slug>`. Each command runs
+the recipe below for that layer, registers the result, and runs the validator. Building a
+capability by hand is the same recipe without the command.
+
 ### Build a GATEWAY  (`templates/gateway.js`)
 1. Copy the template. Set `slug`, `service`, `modes`, `configFields`.
 2. Implement `call(env, input)`: fetch the service, translate, return JSON. **No reasoning,
